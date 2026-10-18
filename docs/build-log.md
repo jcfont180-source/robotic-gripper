@@ -8,3 +8,4 @@
 - Mechanism: decision matrix in progress.
 - Derived numbers (bottle diameter, egg design ranges, jaw opening) independently recomputed from the raw CSVs; all match.
 - Payload and fragile handling rows set.
+- Force control and durability rows set; every spec row now has a number and a test method. Setpoint values come from the sizing analysis.
