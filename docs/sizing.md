@@ -10,7 +10,7 @@ Raw data: analysis/data/. Bottle mass 512 g. Egg design mass range 48–73 g; th
 ## Assumptions
 <!-- Friction coefficient and its source, safety factor, mechanism efficiency, servo voltage -->
 
-- Friction coefficient: μ = 0.4 (design value) for a solid neoprene pad, about 1.5 mm thick, on the bottle label and on eggshell. No handbook lists these material pairs. The value is conservative: textbook static friction for rubber on concrete is 0.60–0.90 (Beer & Johnston table, reproduced in https://gcp-web.sjsu.edu/people/steven.vukazich/docs/95.8.1%20Friction%20.pdf), and rubbers generally show higher static friction than plastics (https://eprints.ums.edu.my/id/eprint/40836/1/ABSTRACT.pdf). Verified by tilt test once the pad material is in hand: bottle on a pad-covered board with its axis pointing downhill so it slides instead of rolling, egg lying lengthwise; μ = tan(angle at which sliding starts). If the measured μ is below 0.4, redo the sizing with the measured value.
+- Friction coefficient: μ = 0.4 (design value) for a solid neoprene pad, about 1.5 mm thick, on the bottle label and on eggshell. No published table lists these material pairs, so this is a conservative assumption: standard statics tables put dry rubber well above it (rubber on concrete: 0.60–0.90; Beer & Johnston, Vector Mechanics for Engineers: Statics, __ ed., Table 8.1). Verified by tilt test once the pad material is in hand: bottle on a pad-covered board with its axis pointing downhill so it slides instead of rolling, egg lying lengthwise; μ = tan(angle at which sliding starts). If the measured μ is below 0.4, redo the sizing with the measured value.
 - Safety factor on grip force: SF = 2.0, built from named sources that multiply:
 
   | Source | What it covers | Factor |
