@@ -30,7 +30,7 @@
 - **Instrument:** __
 - **Trials:** __
 - **Pass criterion:** __
-- **Reason:** Min = smallest design egg (41 mm) − 2 mm build tolerance (Phase C gate) − 2 mm for pad compression and squeeze travel. Max = bottle width (65.3 mm) + 5 mm approach clearance per side + 2 mm build tolerance, rounded up.
+- **Reason:** Min = smallest design egg (41 mm) − 2 mm build tolerance (allowed difference between the printed jaw opening and the CAD model, checked on the first print) − 2 mm for pad compression and squeeze travel. Max = bottle width (65.3 mm) + 5 mm approach clearance per side + 2 mm build tolerance, rounded up.
 
 ## Durability
 - **Target:** __

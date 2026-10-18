@@ -10,8 +10,8 @@ A two-finger gripper designed for 3D printing, in which an Arduino senses and co
 
 | Requirement | Target | Test method | Result |
 |---|---|---|---|
-| Payload | Hold a 512 g sealed water bottle (Ø 65.3 mm at grip height) for __ s, no slip | | |
-| Fragile handling | Raw egg, no cracks | | |
+| Payload | Hold a 512 g sealed water bottle (Ø 65.3 mm at grip height) for __ s without slipping | | |
+| Fragile handling | __ | | |
 | Force control | Within ±__% of setpoint at __ setpoints | | |
 | Jaw opening | 37 to 78 mm | | |
 | Durability | __ open/close cycles | | |
