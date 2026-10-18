@@ -17,7 +17,7 @@ A two-finger gripper designed for 3D printing, in which an Arduino senses and co
 | Durability | 1000 full open/close cycles without failure | Unloaded Arduino cycle test; no damage, openings within 2 mm of pre-test values | |
 
 ## Mechanism choice
-<!-- Sketches and decision matrix -->
+Rack and pinion, chosen with a weighted decision matrix (4.40 vs. 3.50 and 2.75). See docs/decision-matrix.md.
 
 ## Sizing analysis
 <!-- Grip force, safety factor, servo torque and margin -->
