@@ -7,3 +7,4 @@
 - Set egg design range (41–48 mm, 48–73 g) and jaw opening (37–78 mm, stroke 41 mm).
 - Mechanism: decision matrix in progress.
 - Derived numbers (bottle diameter, egg design ranges, jaw opening) independently recomputed from the raw CSVs; all match.
+- Payload and fragile handling rows set.
