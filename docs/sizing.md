@@ -45,11 +45,23 @@ with g = 9.81 m/s² and μ = 0.4.
 
 Midway setpoint: 7.2 N, the midpoint of the egg and bottle setpoints. Setpoints are per-pad normal forces, which is what the FSR in one pad measures.
 
-Egg check: the peak limit is 1.2 × 1.8 = 2.2 N. A study of Hisex Brown hen eggs measured average rupture forces of 39.37 N (free-range) and 37.68 N (aviary) (South African Journal of Animal Science 49(3), 2019: https://scielo.org.za/pdf/sajas/v49n3/07.pdf), so the peak stays about 18× below typical breaking force. Eggshells resist distributed loads far better than point loads (Hahn et al., Journal of the Royal Society Interface 14(126), 2017, doi:10.1098/rsif.2016.0804), which supports using rubber pads.
+Egg check: the peak limit is 1.2 × 1.8 = 2.2 N. A study of Hisex Brown hen eggs measured average rupture forces of 39.37 N (free-range) and 37.68 N (aviary) (South African Journal of Animal Science 49(3), 2019: https://scielo.org.za/pdf/sajas/v49n3/07.pdf), so the peak stays about 17–18× below typical breaking force. Eggshells resist distributed loads far better than point loads (Hahn et al., Journal of the Royal Society Interface 14(126), 2017, doi:[10.1098/rsif.2016.0804](https://doi.org/10.1098/rsif.2016.0804)), which supports using rubber pads.
 
 ## Kinematics: jaw gap vs. servo angle
 
-__
+Rack and pinion: each rack moves rθ (θ in radians) and both jaws move, so the gap changes by 2rθ:
+
+$$g(\theta) = g_{closed} + 2r\theta$$
+
+with g_closed = 37 mm (CAD). Covering the 41 mm stroke needs θ = 41 / (2r).
+
+Pinion: module m = 1.25 mm, z = 18 teeth, 20° pressure angle, so r = mz/2 = 11.25 mm (pitch diameter 22.5 mm).
+- Full stroke uses θ = 41 / (2 × 11.25) = 1.822 rad = 104° of servo rotation, well inside a nominal 180° range (real servos often travel less).
+- 18 teeth avoids undercut at a 20° pressure angle (theoretical minimum 2 / sin²(20°) ≈ 17.1).
+- A 1.25 mm module gives teeth large enough to print cleanly on an FDM printer.
+- The jaw gap changes by 2r × π/180 ≈ 0.39 mm per degree of servo rotation.
+
+Alternative considered: module 1 mm, 18 teeth (r = 9 mm, 130° of rotation) needs about 20% less torque, but has smaller teeth and uses more of the servo's range.
 
 ## Servo torque (worst case)
 
