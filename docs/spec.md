@@ -17,7 +17,7 @@
 - **Reason:** Design ranges are the sample mean ± 3 standard deviations, rounded outward (width: mean 44.8 mm, s ≈ 1.0 mm; mass: mean 60.4 g, s ≈ 4.1 g). The sample is small, so every test egg is measured and logged. Cracks happen at peak force during closing, so a 10 s hold is enough to show a stable grip. Using one egg for all 10 trials is the harder test, since damage accumulates.
 
 ## Force control
-- **Target:** Steady-state force within ±15% of the setpoint at 3 setpoints (egg, bottle, and one midway; values set in docs/sizing.md), with peak force during closing no more than 20% above the setpoint
+- **Target:** Steady-state force within ±15% of the setpoint at 3 setpoints (egg, bottle, and one midway; 1.8, 7.2, and 12.6 N per pad; derivation in docs/sizing.md), with peak force during closing no more than 20% above the setpoint
 - **Test setup:** Same rig as Payload and Fragile handling. The egg setpoint is tested on the egg; the bottle and midway setpoints on the bottle. Each trial: close to the setpoint, hold 10 s, open. Force is logged to Python at 50 Hz.
 - **Instrument:** FSR in one finger pad, calibrated against known weights (calibration error reported separately); Arduino logging to Python
 - **Trials:** 5 per setpoint (15 total)

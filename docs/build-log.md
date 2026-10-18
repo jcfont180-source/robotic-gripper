@@ -12,3 +12,4 @@
 - Jaw opening split into a CAD target (37–78 mm, includes 2 mm print allowance) and printed acceptance limits (≤ 39 mm closed, ≥ 76 mm open).
 - Mechanism chosen: rack and pinion (weighted decision matrix).
 - Sizing assumptions set: μ = 0.4, SF = 2.0, η = 0.5, servo torque from the 4.8 V rating. Pad material: solid neoprene, about 1.5 mm (to buy).
+- Grip force sized: setpoints 1.8 N (egg), 7.2 N (midway), 12.6 N (bottle) per pad. Free-body diagram added.

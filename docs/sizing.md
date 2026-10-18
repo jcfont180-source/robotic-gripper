@@ -28,7 +28,24 @@ Raw data: analysis/data/. Bottle mass 512 g. Egg design mass range 48–73 g; th
 
 ## Grip force
 
-__
+Free-body diagram: the object hangs between two pads. Each pad presses with normal force N and supplies friction f ≤ μN upward; the weight mg acts downward.
+
+![Free-body diagram of the bottle held by two pads](images/grip-force-fbd.png)
+
+At the moment of slipping, the vertical balance gives
+
+$$2\mu N = mg \quad\Rightarrow\quad N = \frac{mg}{2\mu}$$
+
+with g = 9.81 m/s² and μ = 0.4.
+
+| Object | m (kg) | mg (N) | Minimum N per pad (N) | Setpoint = SF × N (N) |
+|---|---|---|---|---|
+| Bottle | 0.512 | 5.02 | 6.28 | 12.6 |
+| Heavy design egg | 0.073 | 0.716 | 0.895 | 1.8 |
+
+Midway setpoint: 7.2 N, the midpoint of the egg and bottle setpoints. Setpoints are per-pad normal forces, which is what the FSR in one pad measures.
+
+Egg check: the peak limit is 1.2 × 1.8 = 2.2 N. A study of Hisex Brown hen eggs measured average rupture forces of 39.37 N (free-range) and 37.68 N (aviary) (South African Journal of Animal Science 49(3), 2019: https://scielo.org.za/pdf/sajas/v49n3/07.pdf), so the peak stays about 18× below typical breaking force. Eggshells resist distributed loads far better than point loads (Hahn et al., Journal of the Royal Society Interface 14(126), 2017, doi:10.1098/rsif.2016.0804), which supports using rubber pads.
 
 ## Kinematics: jaw gap vs. servo angle
 
