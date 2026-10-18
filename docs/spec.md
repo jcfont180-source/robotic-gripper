@@ -25,12 +25,12 @@
 - **Reason:** ±15% leaves room for FSR hysteresis and drift and for the servo's step size; revisit once the FSR is chosen. The peak limit protects the egg, which reacts to peak force, not the average. 50 Hz logging catches the peak during closing. Tracking error is measured with the calibrated FSR, so the calibration error is reported alongside it.
 
 ## Jaw opening
-- **Target:** 37 to 78 mm (stroke 41 mm)
-- **Test setup:** Gripper clamped, no load. Command full closed and measure the gap between the jaw pad faces; command full open and measure again.
+- **Target:** CAD design: 37 to 78 mm (stroke 41 mm). Printed gripper: closes to 39 mm or less and opens to 76 mm or more.
+- **Test setup:** Gripper clamped, no load. Command full closed and measure the gap between the jaw pad faces; command full open and measure again. Also record each reading's difference from the CAD values.
 - **Instrument:** Tape measure (1 mm marks)
 - **Trials:** 3 readings at each end, averaged
-- **Pass criterion:** Mean full-closed opening ≤ 37 mm and mean full-open opening ≥ 78 mm
-- **Reason:** Min = smallest design egg (41 mm) − 2 mm build tolerance (allowed difference between the printed jaw opening and the CAD model, checked on the first print) − 2 mm for pad compression and squeeze travel. Max = bottle width (65.3 mm) + 5 mm approach clearance per side + 2 mm build tolerance, rounded up.
+- **Pass criterion:** Mean full-closed opening ≤ 39 mm and mean full-open opening ≥ 76 mm
+- **Reason:** Min = smallest design egg (41 mm) − 2 mm build tolerance (allowed difference between the printed jaw opening and the CAD model, checked on the first print) − 2 mm for pad compression and squeeze travel. Max = bottle width (65.3 mm) + 5 mm approach clearance per side + 2 mm build tolerance, rounded up. The 37–78 mm CAD target includes 2 mm for print error. The printed gripper is tested against the working limits: 39 mm (smallest design egg minus squeeze travel) and 76 mm (bottle plus approach clearance, 75.3 mm, rounded up to a whole mm).
 
 ## Durability
 - **Target:** 1000 full open/close cycles without failure

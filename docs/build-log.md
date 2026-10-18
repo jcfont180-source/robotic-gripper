@@ -9,3 +9,4 @@
 - Derived numbers (bottle diameter, egg design ranges, jaw opening) independently recomputed from the raw CSVs; all match.
 - Payload and fragile handling rows set.
 - Force control and durability rows set; every spec row now has a number and a test method. Setpoint values come from the sizing analysis.
+- Jaw opening split into a CAD target (37–78 mm, includes 2 mm print allowance) and printed acceptance limits (≤ 39 mm closed, ≥ 76 mm open).
