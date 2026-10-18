@@ -1,0 +1,7 @@
+# SOLIDWORKS lock files
+~$*
+Thumbs.db
+desktop.ini
+*.asv
+__pycache__/
+*.pyc
