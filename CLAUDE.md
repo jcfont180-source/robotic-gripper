@@ -7,7 +7,9 @@
 - Roles: I own the spec, the calculations, and every design decision. You
   write code to my spec. Never invent or change a spec number; if one is
   missing, ask me.
-- Source of truth for requirements: the Spec table in README.md.
+- Requirements live in docs/spec.md; the README Spec table is a summary and
+  must match it. Raw measurements live in analysis/data/ as CSV; never edit
+  measured values.
 - Units: N, mm, N·mm for torque, g for mass.
 - Wiring: servo signal on pin 9; servo power from the bench supply, never the
   Arduino 5V pin; supply negative tied to Arduino GND.

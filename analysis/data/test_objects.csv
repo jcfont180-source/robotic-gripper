@@ -1,0 +1,5 @@
+object,quantity,value,unit,instrument,date,notes
+water_bottle,mass,512,g,Scale A (kitchen scale; 2 g to 5 kg range; 1 g resolution),2026-10-18,Deer Park; sealed and full
+water_bottle,mass_check,511.2,g,Scale B (Etekcity kitchen scale; Max 5 kg; d = 1 g per label),2026-10-18,Cross-check of the Scale A reading; display showed one decimal although the label states 1 g resolution; treat as ±1 g
+water_bottle,circumference_at_grip,205,mm,Tape measure (1 mm marks),2026-10-18,Measured on the label at 120 mm from base
+water_bottle,grip_height,120,mm,Tape measure (1 mm marks),2026-10-18,Measured from base; label does not twist
