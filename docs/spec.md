@@ -17,7 +17,7 @@
 - **Reason:** Design ranges are the sample mean ± 3 standard deviations, rounded outward (width: mean 44.8 mm, s ≈ 1.0 mm; mass: mean 60.4 g, s ≈ 4.1 g). The sample is small, so every test egg is measured and logged.
 
 ## Force control
-- **Target:** __
+- **Target:** Within ±__% of setpoint at __ setpoints
 - **Test setup:** __
 - **Instrument:** __
 - **Trials:** __
@@ -33,7 +33,7 @@
 - **Reason:** Min = smallest design egg (41 mm) − 2 mm build tolerance (allowed difference between the printed jaw opening and the CAD model, checked on the first print) − 2 mm for pad compression and squeeze travel. Max = bottle width (65.3 mm) + 5 mm approach clearance per side + 2 mm build tolerance, rounded up.
 
 ## Durability
-- **Target:** __
+- **Target:** __ open/close cycles
 - **Test setup:** __
 - **Instrument:** __
 - **Trials:** __
