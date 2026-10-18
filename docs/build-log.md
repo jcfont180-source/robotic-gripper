@@ -11,3 +11,4 @@
 - Force control and durability rows set; every spec row now has a number and a test method. Setpoint values come from the sizing analysis.
 - Jaw opening split into a CAD target (37–78 mm, includes 2 mm print allowance) and printed acceptance limits (≤ 39 mm closed, ≥ 76 mm open).
 - Mechanism chosen: rack and pinion (weighted decision matrix).
+- Sizing assumptions set: μ = 0.4, SF = 2.0, η = 0.5, servo torque from the 4.8 V rating. Pad material: solid neoprene, about 1.5 mm (to buy).

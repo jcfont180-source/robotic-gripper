@@ -16,4 +16,4 @@ Force-control behavior replaces Gear-free, which double-counted Ease of modeling
 
 ## Decision and reason
 
-Rack and pinion. Highest weighted total (4.40 vs. 3.50 and 2.75). Weights: modeling and printing 20% each (CAD due Monday; build risk over winter break), force-control behavior 20% (the core of the project), part count 10% (overlaps the ease rows). Sensitivity check: rack and pinion stays on top unless ease of modeling and printing together carry more than about 60% of the weight.
+Rack and pinion. Highest weighted total (4.40 vs. 3.50 and 2.75). Weights: modeling and printing 20% each (CAD due Monday, Oct 19, 2026; build risk over winter break), force-control behavior 20% (the core of the project), part count 10% (overlaps the ease rows). Sensitivity check: rack and pinion stays on top unless ease of modeling and printing together carry more than 62.5% of the weight (when the other four rows keep their proportions; at 62.5% it ties with the parallelogram four-bar). Crank and links never passes rack and pinion.
