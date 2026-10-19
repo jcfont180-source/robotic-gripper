@@ -16,3 +16,6 @@
 - Kinematics: pinion module 1.25 mm, 18 teeth (r = 11.25 mm); full stroke uses 104° of servo rotation.
 - Core CAD parts modeled in SOLIDWORKS: pinion, finger-rack, base plate. Involute pinion and rack profiles generated in Python; rack-pinion mesh checked in 2D (no overlap, 0.15 mm backlash offset).
 - Torque sized: 567 N·mm (5.78 kg·cm) required. MG996R chosen (+63% margin steady, +35% at peak); SG90 insufficient (31%). Datasheet travel ~120°: measure on arrival.
+- Finger-rack fix: the arm, sensor pocket and pad had been extruded on the wrong side of the Right Plane, so the pad faced outward. Reversed all three.
+- Assembly rebuilt from scratch (Gripper_assembly) after a side-view check showed a flipped mate had put the gear inside the plate. New mates use only planes and origins on the shared datum (Front Plane = sliding face, Top Plane through the pinion axis): gear Front–Front plus origin–origin; each rack Front–Front plus Top–Top (lower rack anti-aligned). Verified in front and side views: gear and racks in one layer on the plate, tongues inside the grooves, pads facing each other.
+- Next: rack-pinion mates, 37–78 mm travel limits, interference check.

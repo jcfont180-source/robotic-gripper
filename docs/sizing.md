@@ -101,8 +101,8 @@ Final servo: TowerPro MG996R (metal gear). The kit's SG90 supplies about a third
 
 ## CAD dimensions
 
-- Pinion face width: 8 mm. Check at the servo's full stall torque (922 N·mm at 4.8 V): each of the two meshes carries 922 / (2 × 11.25) ≈ 41 N. Lewis bending stress σ = W / (b·m·Y) = 41 / (8 × 1.25 × 0.31) ≈ 13 MPa (form factor Y ≈ 0.31 for 18 teeth at 20°), well below the strength of printed PLA; confirm against the filament's datasheet.
+- Pinion face width: 8 mm. Check at the servo's full stall torque (922 N·mm at 4.8 V): each of the two meshes carries 922 / (2 × 11.25) ≈ 41 N. Lewis bending stress σ = W / (b·module·Y) = 41 / (8 × 1.25 × 0.31) ≈ 13 MPa (form factor Y ≈ 0.31 for 18 teeth at 20°), well below the strength of printed PLA; confirm against the filament's datasheet.
 - Pinion bore: Ø3.4 mm, clearance for the M3 horn screw. The horn hole pattern is added once the MG996R is in hand.
-- Rack: module 1.25 mm, 20° pressure angle, straight-sided teeth, 10 teeth (39.3 mm of teeth). The teeth run from 10 mm to about 49 mm from the pad surface, so the rack stays engaged with the pinion across the full 41 mm stroke.
+- Rack: module 1.25 mm, 20° pressure angle, straight-sided teeth, 10 teeth (39.3 mm of teeth). The teeth run from 10 mm to about 49 mm from the pad surface, so the rack stays engaged with the pinion across the full 41 mm stroke (each rack travels 20.5 mm, half the stroke).
 - Backlash: the rack pitch line sits 0.15 mm farther from the pinion axis than the pitch radius (11.40 mm instead of 11.25 mm), which gives about 2 × 0.15 × tan 20° ≈ 0.11 mm of backlash along the pitch line.
 - Rack body: 60 mm long (from 8 mm behind the finger's inner face to 52 mm in front of it), top 21 mm above the pinion axis, 8 mm thick to match the pinion.
