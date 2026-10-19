@@ -14,3 +14,4 @@
 - Sizing assumptions set: μ = 0.4, SF = 2.0, η = 0.5, servo torque from the 4.8 V rating. Pad material: solid neoprene, about 1.5 mm (to buy).
 - Grip force sized: setpoints 1.8 N (egg), 7.2 N (midway), 12.6 N (bottle) per pad. Free-body diagram added.
 - Kinematics: pinion module 1.25 mm, 18 teeth (r = 11.25 mm); full stroke uses 104° of servo rotation.
+- Core CAD parts modeled in SOLIDWORKS: pinion, finger-rack, base plate. Involute pinion and rack profiles generated in Python; rack-pinion mesh checked in 2D (no overlap, 0.15 mm backlash offset).
