@@ -98,3 +98,11 @@ Gate: at least 25% margin over the worst case. The MG996R passes at both.
 ## Result
 
 Final servo: TowerPro MG996R (metal gear). The kit's SG90 supplies about a third of the required torque, so it is used only for unloaded motion tests. During the 30 s bottle hold, the MG996R sits at about 62% of its stall torque at zero speed, so expect it to warm up; rest between trials. Its datasheet stall current is 2.5 A at 6 V, so set the bench supply's current limit to about 2.5 A for the build.
+
+## CAD dimensions
+
+- Pinion face width: 8 mm. Check at the servo's full stall torque (922 N·mm at 4.8 V): each of the two meshes carries 922 / (2 × 11.25) ≈ 41 N. Lewis bending stress σ = W / (b·m·Y) = 41 / (8 × 1.25 × 0.31) ≈ 13 MPa (form factor Y ≈ 0.31 for 18 teeth at 20°), well below the strength of printed PLA; confirm against the filament's datasheet.
+- Pinion bore: Ø3.4 mm, clearance for the M3 horn screw. The horn hole pattern is added once the MG996R is in hand.
+- Rack: module 1.25 mm, 20° pressure angle, straight-sided teeth, 10 teeth (39.3 mm of teeth). The teeth run from 10 mm to about 49 mm from the pad surface, so the rack stays engaged with the pinion across the full 41 mm stroke.
+- Backlash: the rack pitch line sits 0.15 mm farther from the pinion axis than the pitch radius (11.40 mm instead of 11.25 mm), which gives about 2 × 0.15 × tan 20° ≈ 0.11 mm of backlash along the pitch line.
+- Rack body: 60 mm long (from 8 mm behind the finger's inner face to 52 mm in front of it), top 21 mm above the pinion axis, 8 mm thick to match the pinion.
