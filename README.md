@@ -20,7 +20,7 @@ A two-finger gripper designed for 3D printing, in which an Arduino senses and co
 Rack and pinion, chosen with a weighted decision matrix (4.40 vs. 3.50 and 2.75). See docs/decision-matrix.md.
 
 ## Sizing analysis
-<!-- Grip force, safety factor, servo torque and margin -->
+Grip setpoints 1.8 / 7.2 / 12.6 N per pad (μ = 0.4, SF = 2.0). Pinion: module 1.25 mm, 18 teeth (r = 11.25 mm); full stroke uses 104° of servo rotation. Required torque 567 N·mm (5.78 kg·cm) with η = 0.5. MG996R margin: +63% steady, +35% at the closing peak. Details in docs/sizing.md.
 
 ## Repo layout
 - `cad/`: SOLIDWORKS files plus STEP and STL exports

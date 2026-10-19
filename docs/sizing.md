@@ -51,32 +51,50 @@ Egg check: the peak limit is 1.2 × 1.8 = 2.2 N. A study of Hisex Brown hen eggs
 
 Rack and pinion: each rack moves rθ (θ in radians) and both jaws move, so the gap changes by 2rθ:
 
-$$g(\theta) = g_{closed} + 2r\theta$$
+$$w(\theta) = w_{closed} + 2r\theta$$
 
-with g_closed = 37 mm (CAD). Covering the 41 mm stroke needs θ = 41 / (2r).
+with w_closed = 37 mm (CAD). Covering the 41 mm stroke needs θ = 41 / (2r).
 
-Pinion: module m = 1.25 mm, z = 18 teeth, 20° pressure angle, so r = mz/2 = 11.25 mm (pitch diameter 22.5 mm).
-- Full stroke uses θ = 41 / (2 × 11.25) = 1.822 rad = 104° of servo rotation, well inside a nominal 180° range (real servos often travel less).
+Pinion: module 1.25 mm, z = 18 teeth, 20° pressure angle, so r = (module × z)/2 = 11.25 mm (pitch diameter 22.5 mm).
+- Full stroke uses θ = 41 / (2 × 11.25) = 1.822 rad = 104° of servo rotation, inside the MG996R datasheet's stated travel of about 120° (60° each way), with about 16° to spare. Measure the actual travel when the servo arrives; if it is under about 110°, resize the pinion.
 - 18 teeth avoids undercut at a 20° pressure angle (theoretical minimum 2 / sin²(20°) ≈ 17.1).
 - A 1.25 mm module gives teeth large enough to print cleanly on an FDM printer.
 - The jaw gap changes by 2r × π/180 ≈ 0.39 mm per degree of servo rotation.
 
-Alternative considered: module 1 mm, 18 teeth (r = 9 mm, 130° of rotation) needs about 20% less torque, but has smaller teeth and uses more of the servo's range.
+Alternative considered: module 1 mm, 18 teeth (r = 9 mm, 130° of rotation) needs about 20% less torque, but has smaller teeth and uses more of the servo's range. It would also need 130° of rotation, more than the datasheet's ~120°.
 
 ## Servo torque (worst case)
 
-__
+The pinion drives both racks, so it supplies both pads' forces at the pitch radius, and drive losses divide by η:
+
+$$T = \frac{2Fr}{\eta}$$
+
+The worst case is the bottle setpoint, F = 12.6 N per pad. Rack and pinion has a constant torque-to-force ratio, so the worst case is the same at every point in the stroke.
+
+Steady hold: T = 2 × 12.6 N × 11.25 mm / 0.5 = 567 N·mm = 5.78 kg·cm (1 kg·cm = 98.07 N·mm).
+
+Closing peak (the spec allows 1.2 × setpoint): 1.2 × 567 = 680 N·mm = 6.94 kg·cm.
 
 ## Servo comparison
 <!-- Stall torque at my voltage, converted to N·mm -->
 
-__
+| Servo | Stall torque at 4.8 V | N·mm | Source |
+|---|---|---|---|
+| SG90 | 1.8 kgf·cm | 177 | TowerPro SG90 datasheet: https://tams.informatik.uni-hamburg.de/lehre/2023ss/vorlesung/es/doc/sg90.pdf |
+| MG996R | 9.4 kgf·cm | 922 | TowerPro MG996R datasheet: https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/f2017/kmv48_rp625/kmv48_rp625/kmv48_rp625/MG996RTowerPro.pdf |
 
 ## Margin
 <!-- State what it is measured against -->
 
-__
+Margin = stall torque at 4.8 V ÷ required torque − 1 (measured against stall torque).
+
+| Servo | vs. steady hold (567 N·mm) | vs. closing peak (680 N·mm) |
+|---|---|---|
+| SG90 | supplies 31% of required (fails) | supplies 26% of required (fails) |
+| MG996R | +63% | +35% |
+
+Gate: at least 25% margin over the worst case. The MG996R passes at both.
 
 ## Result
 
-__
+Final servo: TowerPro MG996R (metal gear). The kit's SG90 supplies about a third of the required torque, so it is used only for unloaded motion tests. During the 30 s bottle hold, the MG996R sits at about 62% of its stall torque at zero speed, so expect it to warm up; rest between trials. Its datasheet stall current is 2.5 A at 6 V, so set the bench supply's current limit to about 2.5 A for the build.
