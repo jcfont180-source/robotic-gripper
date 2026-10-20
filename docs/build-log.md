@@ -20,3 +20,25 @@
 - Assembly rebuilt from scratch (Gripper_assembly) after a side-view check showed a flipped mate had put the gear inside the plate. New mates use only planes and origins on the shared datum (Front Plane = sliding face, Top Plane through the pinion axis): gear Front–Front plus origin–origin; each rack Front–Front plus Top–Top (lower rack anti-aligned). Verified in front and side views: gear and racks in one layer on the plate, tongues inside the grooves, pads facing each other.
 - Next: rack-pinion mates, 37–78 mm travel limits, interference check.
 - Linked both racks to the gear with Rack Pinion mates (pinion pitch diameter 22.5 mm). Teeth were lined up first with temporary mates: gear Right Plane coincident with base_plate Right Plane, and each rack's Right Plane 33.10 mm from it. That centers the 6th rack tooth in the gear's top and bottom gaps, with a pad gap of 63.2 mm. The temporary mates were deleted before the Rack Pinion mates were added. Drag test from a screen recording: upper rack +2.44 mm gave 12.25° of clockwise gear rotation (predicted 12.43°) and lower rack -2.44 mm. Teeth stayed meshed. The upper rack's mate needed Reverse; the lower rack's mate was correct as created.
+
+## 2026-10-20 - Interference check
+
+- Interference check. The first run, done by dragging to the stops, showed tooth overlaps of up to 18.8 mm^3 between the pinion and both racks. I traced these to the Rack Pinion mates losing tooth timing as the jaws moved, not to the geometry. A 2D model of the gear and rack profiles reproduced the reported volumes with the gear 0.6 mm (closed) and 1.1 mm (open) out of step along its pitch circle, and it gives zero overlap with the teeth in step. I re-ran the check with exact positions set by standard mates: rack Right Planes 20.00 / 33.10 / 40.50 mm from center and gear angle 6.71° / 0° / 2.30°. Result: No Interferences at closed (37 mm), middle (63.2 mm) and open (78 mm). Then I re-created the Rack Pinion mates at the in-step middle position (both needed Reverse this time) and re-checked the moving mechanism with the whole assembly selected: No Interferences at 37, 52 and 78 mm.
+
+![Interference Detection, exact positions, closed](images/interference-closed.png)
+*Exact positions, closed (37 mm): No Interferences.*
+
+![Interference Detection, exact positions, middle](images/interference-middle.png)
+*Exact positions, middle (63.2 mm): No Interferences.*
+
+![Interference Detection, exact positions, open](images/interference-open.png)
+*Exact positions, open (78 mm): No Interferences.*
+
+![Interference Detection, moving mechanism, closed](images/mechanism-closed.png)
+*Moving mechanism with re-timed Rack Pinion mates, closed (37 mm): No Interferences.*
+
+![Interference Detection, moving mechanism, middle](images/mechanism-middle.png)
+*Moving mechanism with re-timed Rack Pinion mates, 52 mm: No Interferences.*
+
+![Interference Detection, moving mechanism, open](images/mechanism-open.png)
+*Moving mechanism with re-timed Rack Pinion mates, open (78 mm): No Interferences.*
