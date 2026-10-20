@@ -21,6 +21,10 @@
 - Next: rack-pinion mates, 37–78 mm travel limits, interference check.
 - Linked both racks to the gear with Rack Pinion mates (pinion pitch diameter 22.5 mm). Teeth were lined up first with temporary mates: gear Right Plane coincident with base_plate Right Plane, and each rack's Right Plane 33.10 mm from it. That centers the 6th rack tooth in the gear's top and bottom gaps, with a pad gap of 63.2 mm. The temporary mates were deleted before the Rack Pinion mates were added. Drag test from a screen recording: upper rack +2.44 mm gave 12.25° of clockwise gear rotation (predicted 12.43°) and lower rack -2.44 mm. Teeth stayed meshed. The upper rack's mate needed Reverse; the lower rack's mate was correct as created.
 
+## 2026-10-19 - Travel limits
+
+- Travel limits: a LimitDistance mate between the two racks' Right Planes, 40–81 mm, holds the jaws to 37–78 mm (the 3 mm difference is the two 1.5 mm pads). Stops verified at 37 and 78 mm.
+
 ## 2026-10-20 - Interference check
 
 - Interference check. The first run, done by dragging to the stops, showed tooth overlaps of up to 18.8 mm^3 between the pinion and both racks. I traced these to the Rack Pinion mates losing tooth timing as the jaws moved, not to the geometry. A 2D model of the gear and rack profiles reproduced the reported volumes with the gear 0.6 mm (closed) and 1.1 mm (open) out of step along its pitch circle, and it gives zero overlap with the teeth in step. I re-ran the check with exact positions set by standard mates: rack Right Planes 20.00 / 33.10 / 40.50 mm from center and gear angle 6.71° / 0° / 2.30°. Result: No Interferences at closed (37 mm), middle (63.2 mm) and open (78 mm). Then I re-created the Rack Pinion mates at the in-step middle position (both needed Reverse this time) and re-checked the moving mechanism with the whole assembly selected: No Interferences at 37, 52 and 78 mm.
@@ -42,3 +46,7 @@
 
 ![Interference Detection, moving mechanism, open](images/mechanism-open.png)
 *Moving mechanism with re-timed Rack Pinion mates, open (78 mm): No Interferences.*
+
+## 2026-10-20 - Motion study
+
+- Motion study: rotary motor on the pinion, oscillating (Displacement 45°, 0.25 Hz). SOLIDWORKS swings it 45° one way and back rather than ±45°, so the jaws go from about 57 mm to 75 mm and back, inside the stops; the rack-pinion mates held their timing. Exported at 30 fps; docs/images/gripper_front.gif was made from it, stabilized and cropped.
